@@ -11,7 +11,7 @@ const Requests = () => {
   const handleRequests = async (status, _id) => {
     try {
       const res = await axios.post(
-        "http://192.168.18.131:3000/request/review/" + status + "/" + _id,
+        "/api/request/review/" + status + "/" + _id,
         {},
         { withCredentials: true }
       );
@@ -23,12 +23,9 @@ const Requests = () => {
 
   const fecthConnections = async () => {
     try {
-      const res = await axios.get(
-        "http://192.168.18.131:3000/user/requests/received",
-        {
-          withCredentials: true,
-        }
-      );
+      const res = await axios.get("/api/user/requests/received", {
+        withCredentials: true,
+      });
 
       dispatch(addRequests(res?.data?.requests));
     } catch (error) {

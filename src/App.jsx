@@ -11,10 +11,10 @@ function App() {
   const navigate = useNavigate();
   const fetchUser = async () => {
     try {
-      const res = await axios.get("http://192.168.18.131:3000/profile", {
+      const res = await axios.get("/api/profile", {
         withCredentials: true,
       });
-     
+
       dispatch(addUser(res.data));
     } catch (error) {
       if (error.status === 401) {

@@ -10,12 +10,9 @@ const Connections = () => {
 
   const fecthConnections = async () => {
     try {
-      const res = await axios.get(
-        "http://192.168.18.131:3000/user/connections",
-        {
-          withCredentials: true,
-        }
-      );
+      const res = await axios.get("/api/user/connections", {
+        withCredentials: true,
+      });
       dispatch(addConnections(res?.data?.connections));
     } catch (error) {
       console.error("Error fetching connections:", error);

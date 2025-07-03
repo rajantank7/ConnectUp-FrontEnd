@@ -15,7 +15,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://192.168.18.131:3000/logout",
+        "/api/logout",
         {},
         {
           withCredentials: true,
@@ -32,7 +32,7 @@ const Navbar = () => {
 
   const handleToken = async () => {
     try {
-      const res = await axios.get("http://192.168.18.131:3000/verify-token", {
+      const res = await axios.get("/api/verify-token", {
         withCredentials: true,
       });
     } catch (error) {

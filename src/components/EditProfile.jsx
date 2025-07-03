@@ -33,7 +33,7 @@ const EditProfile = () => {
   const saveProfile = async () => {
     try {
       const res = await axios.patch(
-        "http://192.168.18.131:3000/profile/edit",
+        "/api/profile/edit",
         {
           firstName,
           lastName,

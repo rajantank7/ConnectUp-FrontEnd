@@ -23,7 +23,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const res = await axios.post(
-        "http://192.168.18.131:3000/login",
+        "/api/login",
         {
           emailId: email,
           password: password,
@@ -44,7 +44,7 @@ const Login = () => {
   const handleSignUp = async () => {
     try {
       const res = await axios.post(
-        "http://192.168.18.131:3000/signup",
+        "/api/signup",
         {
           firstName: firstName,
           lastName: lastName,

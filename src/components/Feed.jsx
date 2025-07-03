@@ -7,14 +7,13 @@ import UserCard from "./UserCard";
 const Feed = () => {
   const dispatch = useDispatch();
   const user = useSelector((store) => store.feed);
- 
 
   const getFeed = async () => {
     try {
-      const res = await axios.get("http://192.168.18.131:3000/feed", {
+      const res = await axios.get("/api/feed", {
         withCredentials: true,
       });
-      
+
       dispatch(addFeed(res.data));
     } catch (error) {
       console.error("Error fetching feed:", error);

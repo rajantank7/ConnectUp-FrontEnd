@@ -10,7 +10,7 @@ const UserCard = ({ user, showFeedCheck = false }) => {
   const handleSendRequest = async (status) => {
     try {
       const res = await axios.post(
-        "http://192.168.18.131:3000/request/send/" + status + "/" + _id,
+        "/api/request/send/" + status + "/" + _id,
         {},
         { withCredentials: true }
       );
