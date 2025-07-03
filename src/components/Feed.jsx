@@ -7,6 +7,7 @@ import UserCard from "./UserCard";
 const Feed = () => {
   const dispatch = useDispatch();
   const user = useSelector((store) => store.feed);
+  const [loading, setLoading] = useState(true);
 
   const getFeed = async () => {
     try {
@@ -17,6 +18,8 @@ const Feed = () => {
       dispatch(addFeed(res.data));
     } catch (error) {
       console.error("Error fetching feed:", error);
+    } finally {
+      setLoading(false); // 👈 fetch is done
     }
   };
 
@@ -24,9 +27,16 @@ const Feed = () => {
     getFeed();
   }, []);
 
+  if (loading) {
+    return;
+  }
+
   if (!user) return;
   return (
-    <div className="flex justify-center my-9  md:my-6">
+    <div className="flex flex-col ite-center my-9  md:my-6">
+      <h1 className="text-2xl sm:text-3xl font-semibold text-gray-300 mb-6 text-center">
+        Discover and connect with people who share your passion.
+      </h1>
       <UserCard user={user[0]} showFeedCheck={true} />
     </div>
   );
