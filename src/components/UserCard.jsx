@@ -31,7 +31,7 @@ const UserCard = ({ user, showFeedCheck = false }) => {
   return (
     <div className="card bg-base-300 w-80 md:w-90 shadow-sm ">
       <figure>
-        <img src={photoUrl} alt="Shoes" className="w-90 h-80" />
+        <img src={photoUrl} alt="Shoes" className="w-90 h-70" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{firstName + " " + lastName}</h2>
