@@ -33,9 +33,9 @@ const Feed = () => {
 
   if (!user) return;
   return (
-    <div className="flex flex-col ite-center my-9  md:my-6">
-      <h1 className="text-2xl sm:text-3xl font-semibold text-gray-300 mb-6 text-center">
-        Discover and connect with people who share your passion.
+    <div className="flex flex-col items-center my-9  md:my-6">
+      <h1 className="text-xl sm:text-3xl font-semibold text-gray-300 mb-6 text-center">
+        "ConnectUp – Find like-minded people and grow your network!"
       </h1>
       <UserCard user={user[0]} showFeedCheck={true} />
     </div>
