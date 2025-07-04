@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer sm:footer-horizontal bg-base-200 text-neutral-content items-center p-4 fixed bottom-0 h-16">
-        <aside className="grid-flow-col items-center">
+      <footer className="footer sm:footer-horizontal bg-base-200 text-neutral-content items-center p-2 fixed bottom-0 h-14">
+        <aside className="grid-flow-col items-center relative top-2 sm:top-0">
           <svg
-            width="36"
-            height="36"
+            width="25"
+            height="25"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             fillRule="evenodd"
