@@ -42,7 +42,7 @@ const Navbar = () => {
     }
   };
   return (
-    <div className="navbar bg-base-200 shadow-sm">
+    <div className="navbar bg-base-300 shadow-sm">
       <div className="flex-1">
         <Link onClick={handleToken} className="btn btn-ghost text-xl">
           🤝 ConnectUp
