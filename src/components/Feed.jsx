@@ -34,9 +34,9 @@ const Feed = () => {
   if (!user) return;
   return (
     <div className="flex flex-col items-center my-4 mx-2 md:mx-0 md:my-3">
-      <h1 className="text-lg sm:text-2xl font-semibold text-gray-300 mb-6 text-center">
+      {user !== null && (<h1 className="text-lg sm:text-2xl font-semibold text-gray-300 mb-6 text-center">
         "ConnectUp – Find like-minded people and grow your network!"
-      </h1>
+      </h1>) }
       <UserCard user={user[0]} showFeedCheck={true} />
     </div>
   );
